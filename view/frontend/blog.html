@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+
+{% block content %}
+<section id="festival">
+    <div class="container">
+        <div class="row-xs-2" id="titre1"> </div>
+        {% for post in listPosts %}
+            <div class="rowx text-center">
+                <p>Id du post <strong>{{ post.getIdPost() }}</strong></p>
+                <p>Chapo du post <strong>{{ post.getChapo() }}</strong></p>
+                <p>Contenu du post <strong>{{ post.getContenu() }}</strong></p>
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+

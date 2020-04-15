@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+
+
+
+
+{% block content %}
+<section id="festival">
+    <div class="container">
+        <div class="row-xs-2" id="titre1">Ceci est mon texte
+        </div>
+
+
+        {% for produit in listProduits %}
+            <div class="row">
+                L'id du produit vaut : {{ produit['id_produit'] }}  Le nom du produit vaut : {{ produit['nom'] }}<br />
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+</section>
+{% endblock %}
